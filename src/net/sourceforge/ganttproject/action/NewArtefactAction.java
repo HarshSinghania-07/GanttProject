@@ -7,6 +7,10 @@ import javax.swing.Action;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
+/**
+ * TODO - Either initiaize the variable myIconOnMouseOver or don't need return
+ * the variable if it is unnecessary.
+ */
 public class NewArtefactAction extends AbstractAction implements RolloverAction {
 
 	private ActiveActionProvider myProvider;
@@ -14,22 +18,23 @@ public class NewArtefactAction extends AbstractAction implements RolloverAction 
 
 	public NewArtefactAction(ActiveActionProvider provider, String iconSize) {
 		myProvider = provider;
-        Icon icon = new ImageIcon(getClass().getResource("/icons/insert_"+iconSize+".gif"));
-        if (icon!=null) {
-            putValue(Action.SMALL_ICON, icon);            
-        }
+		Icon icon = new ImageIcon(getClass().getResource("/icons/insert_" + iconSize + ".gif"));
+		if (icon != null) {
+			putValue(Action.SMALL_ICON, icon);
+		}
 	}
+
 	public void actionPerformed(ActionEvent e) {
 		AbstractAction activeAction = myProvider.getActiveAction();
 		activeAction.actionPerformed(e);
 	}
-	
+
 	public static interface ActiveActionProvider {
 		public AbstractAction getActiveAction();
 	}
 
 	public Icon getIconOnMouseOver() {
-        return myIconOnMouseOver;
+		return myIconOnMouseOver;
 	}
 
 }
