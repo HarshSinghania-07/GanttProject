@@ -241,7 +241,6 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	}
 
 	/** Is the date equals to when */
-	/** TODO - The class should probably define a boolean equals(Object) method. */
 	public boolean equals(GanttCalendar when) {
 		return getYear() == when.getYear()
 				&& getMonth() == when.getMonth()
