@@ -50,7 +50,6 @@ public class SearchKey implements Comparable {
         return result;
     }
 
-    /** TODO - Check for null value of object parameter */
     public boolean equals(Object obj) {
         SearchKey rvalue = (SearchKey) obj;
         return myFirstTaskID == rvalue.myFirstTaskID && myType == rvalue.myType
