@@ -24,40 +24,50 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.TimeZone;
 
-
 /**
  * @author dncastilho
  *
- **/  
+ **/
 public class GregorianCalendar extends java.util.GregorianCalendar {
 
   /**
    * Overrides the original, to solve the october duplicated day bug
    */
-  public void add(int field, int value){
-    if (field == Calendar.DATE) this.add(Calendar.HOUR,value*24);
-    else super.add(field,value);
-  }
-  
   /**
-   * From super
+   * Having a class name shadowing super class can be exceptionally confusing,
+   * create lots of situations in which you have to look at import statements to
+   * resolve references
+   * and creates many opportunities to accidentally define methods that do not
+   * override methods in their superclasses.
    */
-  public GregorianCalendar() {
-    super();    
+  public void add(int field, int value) {
+    if (field == Calendar.DATE)
+      this.add(Calendar.HOUR, value * 24);
+    else
+      super.add(field, value);
   }
 
   /**
    * From super
+   */
+  public GregorianCalendar() {
+    super();
+  }
+
+  /**
+   * From super
+   * 
    * @param year
    * @param month
    * @param date
    */
   public GregorianCalendar(int year, int month, int date) {
-    super(year, month, date);    
+    super(year, month, date);
   }
 
   /**
    * From super
+   * 
    * @param year
    * @param month
    * @param date
@@ -65,11 +75,12 @@ public class GregorianCalendar extends java.util.GregorianCalendar {
    * @param minute
    */
   public GregorianCalendar(int year, int month, int date, int hour, int minute) {
-    super(year, month, date, hour, minute);    
+    super(year, month, date, hour, minute);
   }
 
   /**
    * From super
+   * 
    * @param year
    * @param month
    * @param date
@@ -78,31 +89,34 @@ public class GregorianCalendar extends java.util.GregorianCalendar {
    * @param second
    */
   public GregorianCalendar(int year, int month, int date, int hour, int minute, int second) {
-    super(year, month, date, hour, minute, second);    
+    super(year, month, date, hour, minute, second);
   }
 
   /**
    * From super
+   * 
    * @param aLocale
    */
   public GregorianCalendar(Locale aLocale) {
-    super(aLocale);    
+    super(aLocale);
   }
 
   /**
    * From super
+   * 
    * @param zone
    */
   public GregorianCalendar(TimeZone zone) {
-    super(zone);    
+    super(zone);
   }
 
   /**
    * From super
+   * 
    * @param zone
    * @param aLocale
    */
   public GregorianCalendar(TimeZone zone, Locale aLocale) {
-    super(zone, aLocale);    
+    super(zone, aLocale);
   }
 }
