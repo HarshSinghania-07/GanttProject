@@ -267,9 +267,4 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 		GanttCalendar c = new GanttCalendar();
 		return c.toString() + " - " + GanttLanguage.getInstance().formatTime(c);
 	}
-	/*
-	 * public int compareTo(Object o) {
-	 * return compareTo((GanttCalendar)o);
-	 * }
-	 */
 }
