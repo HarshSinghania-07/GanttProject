@@ -523,7 +523,6 @@ public class GanttTree
   }
 
   /** Return all task exept the task in parameter */
-  /** TODO - Don't compare strings with (==) in the for loop */
   public String[] getAllTaskString(String except) {
     ArrayList l = getAllTasks();
     String[] res;
