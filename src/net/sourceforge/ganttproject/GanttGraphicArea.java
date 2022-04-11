@@ -2120,7 +2120,6 @@ public class GanttGraphicArea extends JPanel {
 
   }
 
-  /** TODO - Check for NEGATIVE odd numbers as well on line #2149 */
   private int printTask(Graphics g, int x, int y, ArrayList child) {
 
     for (Iterator tasks = child.iterator(); tasks.hasNext();) {
