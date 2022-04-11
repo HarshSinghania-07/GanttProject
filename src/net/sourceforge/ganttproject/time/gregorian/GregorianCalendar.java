@@ -33,13 +33,6 @@ public class GregorianCalendar extends java.util.GregorianCalendar {
   /**
    * Overrides the original, to solve the october duplicated day bug
    */
-  /**
-   * Having a class name shadowing super class can be exceptionally confusing,
-   * create lots of situations in which you have to look at import statements to
-   * resolve references
-   * and creates many opportunities to accidentally define methods that do not
-   * override methods in their superclasses.
-   */
   public void add(int field, int value) {
     if (field == Calendar.DATE)
       this.add(Calendar.HOUR, value * 24);
