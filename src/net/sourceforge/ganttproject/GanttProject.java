@@ -2009,7 +2009,6 @@ public class GanttProject
 	}
 
 	/** Print the project */
-	/** TODO - Either use the value referenced below or remove to avoid errors. */
 	public void printProject() {
 		if (tabpane.getSelectedIndex() == 0) {// Gantt Chart
 			GanttExportSettings bool = new GanttExportSettings();
