@@ -317,11 +317,6 @@ public class GanttTree
    */
 
   /** add an object with the expand information */
-  /**
-   * Essentially, this code and the previous dereference disagree as to whether
-   * this value is allowed to be null.
-   * Either the check is redundant or the previous dereference is erroneous.
-   */
   public DefaultMutableTreeNode addObjectWithExpand(Object child,
       DefaultMutableTreeNode parent) {
 
